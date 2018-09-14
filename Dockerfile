@@ -138,3 +138,9 @@ RUN apt-get update -y && apt-get install yarn -y
 RUN npm install react-native-cli -g
 
 ENV LANG en_US.UTF-8
+
+# ——————————
+# Change container time zone
+# ——————————
+RUN sudo echo "Asia/Colombo" > /etc/timezone
+RUN sudo dpkg-reconfigure -f noninteractive tzdata
