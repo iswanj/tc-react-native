@@ -142,4 +142,5 @@ ENV LANG en_US.UTF-8
 # ——————————
 # Change container time zone
 # ——————————
+RUN apt-get install dbus -y
 RUN timedatectl set-timezone Asia/Colombo
