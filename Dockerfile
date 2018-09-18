@@ -143,4 +143,4 @@ ENV LANG en_US.UTF-8
 # Change container time zone
 # ——————————
 RUN echo "Asia/Colombo" | sudo tee /etc/timezone
-RUN sudo dpkg-reconfigure --frontend noninteractive tzdata
+RUN dpkg-reconfigure --frontend noninteractive tzdata
