@@ -142,5 +142,6 @@ ENV LANG en_US.UTF-8
 # ——————————
 # Change container time zone
 # ——————————
-RUN echo "Asia/Colombo" | sudo tee /etc/timezone
+RUN apt-get install -y tzdata
+RUN ln -fs /usr/share/zoneinfo/Asia/Colombo /etc/localtime
 RUN dpkg-reconfigure --frontend noninteractive tzdata
